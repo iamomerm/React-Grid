@@ -24,7 +24,7 @@ const Grid = (props) => {
                     if ((idx !== 0 && idx % hCells === 0 && idx !== props.elements.length - 1)) {
                         let ret = <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: props.width, marginBottom: props.rowMarginPx }}>
                             {buffer.map(x => <div style={{}}>{props.elements[x]}</div>)}
-                        </div>;
+                        </div>
                         buffer = [idx];
                         return ret
                     }
@@ -35,11 +35,11 @@ const Grid = (props) => {
                                 {/* Cache Sync */}
                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: props.width, marginBottom: props.rowMarginPx }}>
                                     {buffer.map(x => <div style={{}}>{props.elements[x]}</div>)}
-                                </div>;
+                                </div>
                                 {/* -1 */}
                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: props.width, marginBottom: props.rowMarginPx }}>
                                     <div style={{}}>{props.elements[idx]}</div>
-                                </div>;
+                                </div>
                             </>
                         }
                         else {
@@ -52,7 +52,7 @@ const Grid = (props) => {
                                         /* Generate Placeholders */
                                         pHolders > 0 && [...Array(pHolders).keys()].map(i => <div key={i} style={{ width: props.elementWidthPx, height: props.elementHeightPx }}></div>)
                                     }
-                                </div>;
+                                </div>
                             </>
                         }
                         return ret
